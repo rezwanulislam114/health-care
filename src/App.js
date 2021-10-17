@@ -2,6 +2,7 @@ import Home from './components/Home/Home';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import AuthProvider from './AuthProvider/AuthProvider';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/service/:id">
+            <ServiceDetails />
           </Route>
         </Switch>
       </BrowserRouter>
