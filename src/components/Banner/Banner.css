@@ -1,0 +1,23 @@
+.banner {
+    background: linear-gradient(#006ca652, rgba(255, 255, 255, 0.808)), url(../../images/banner/banner-bg.png);
+    width: 100%;
+    background-size: cover;
+    padding: 70px 20px;
+}
+.banner h1 {
+    font-size: 60px;
+    font-family: 'Jost', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 40px 15px;
+    }
+    .banner h1 {
+        font-size: 40px;
+        font-family: 'Jost', sans-serif;
+    }
+    .banner img {
+        margin-top: 25px;
+    }
+}
