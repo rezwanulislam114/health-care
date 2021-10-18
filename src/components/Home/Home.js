@@ -10,6 +10,7 @@ const Home = () => {
             <Banner />
             <Services />
 
+            {/* overview section  */}
             <Container fluid className="overview mt-5">
                 <Container className="d-flex flex-column flex-md-row text-white justify-content-evenly">
                     <div className="text-center">
@@ -31,6 +32,7 @@ const Home = () => {
                 </Container>
             </Container>
 
+            {/* basic info section  */}
             <Container>
                 <Row className="basic-info my-5" xs={1} lg={3}>
                     <Col className="info-1 py-2 px-4">
@@ -62,6 +64,12 @@ const Home = () => {
                         </div>
                     </Col>
                 </Row>
+            </Container>
+
+            {/* subscribe section  */}
+            <Container className="mt-5">
+                <h1 className="fs-1 sub-title text-center">Subscribe Our Newslatter</h1>
+                <input className="subscibe-input" type="email" placeholder="Write Down Your Email" />
             </Container>
 
 
