@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut } from 'firebase/auth'
 import { useEffect, useState } from 'react';
 import initializeFirebase from '../firebase/firebase.init';
 
@@ -46,6 +46,14 @@ const useFirebase = () => {
         });
     }
 
+    const logOut = () => {
+        signOut(auth).then(() => {
+            setUser({})
+        }).catch((error) => {
+            setError(error.message)
+        });
+    }
+
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -63,7 +71,8 @@ const useFirebase = () => {
         error,
         loginWithEmail,
         setError,
-        success
+        success,
+        logOut
     }
 }
 

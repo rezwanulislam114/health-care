@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
@@ -16,12 +17,12 @@ const Login = () => {
     return (
         <div className="authentication">
             <h1 className="title text-center">Login</h1>
-            <form onSubmit={handleLogin}>
-                <input onBlur={e => setEmail(e.target.value)} type="email" placeholder="Email" />
-                <input onBlur={e => setPassword(e.target.value)} type="password" placeholder="Password" />
+            <Form onSubmit={handleLogin}>
+                <input onBlur={e => setEmail(e.target.value)} required type="email" placeholder="Email" />
+                <input onBlur={e => setPassword(e.target.value)} required type="password" placeholder="Password" />
                 <p className="text-danger">{error}</p>
                 <input type="submit" className="btn-regular" value="Login" />
-            </form>
+            </Form>
             <p className="text-center">Forgot password? <button className="reset-button">Reset password</button></p>
             <hr />
             <button className="btn-regular input-btn">Sign Up With Google</button>

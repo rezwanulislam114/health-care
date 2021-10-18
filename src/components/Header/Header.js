@@ -3,8 +3,12 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
 import logo from '../../images/logo.png'
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
+    const { user, logOut } = useAuth();
+    console.log(user)
+
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -20,9 +24,18 @@ const Header = () => {
                             <Nav.Link as={Link} to="about">About</Nav.Link>
                             <Nav.Link as={Link} to="contact">Contact</Nav.Link>
                         </Nav>
-                        <Nav className="d-flex align-items-center">
-                            <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
-                            <Nav.Link as={Link} to="/login"> <button className="btn-regular m-0">Login</button> </Nav.Link>
+                        <Nav>
+                            {
+                                user.email ?
+                                    <div className="d-flex align-items-center">
+                                        <p className="me-4 m-0">{user.displayName}</p>
+                                        <button onClick={logOut} className="btn-regular m-0">Sign Out</button>
+                                    </div> :
+                                    <div className="d-flex align-items-center">
+                                        <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
+                                        <Nav.Link as={Link} to="/login"> <button className="btn-regular m-0">Login</button> </Nav.Link>
+                                    </div>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
