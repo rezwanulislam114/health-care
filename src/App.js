@@ -6,6 +6,7 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import About from './components/About/About';
 import SignUp from './components/Authentication/SignUp';
 import Login from './components/Authentication/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/service/:id">
+          <PrivateRoute path="/service/:id">
             <ServiceDetails />
-          </Route>
+          </PrivateRoute>
           <Route path="/about">
             <About />
           </Route>
