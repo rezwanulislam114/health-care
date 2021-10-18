@@ -1,0 +1,19 @@
+.quick-link a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px 8px 0;
+}
+.quick-link a:hover{
+    text-decoration: underline;
+}
+.social-link a{
+    display: inline-block;
+    margin: 5px 10px 0;
+    text-decoration: none;
+    color: rgb(87, 87, 87);
+    font-size: 20px;
+}
+.social-link a:hover{
+    color: rgb(0, 0, 0);
+}

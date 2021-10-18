@@ -37,13 +37,13 @@ const Home = () => {
                         <i class="fas fa-phone-volume"></i>
                         <h2 className="sub-title mb-2">Emergency Cases</h2>
                         <p>If you are in emergency, AlphaCare is alawys with you. Here you can get 24/7 hours service. We are alawys try our best to searve you.</p>
-                        <h1>+8801785998429</h1>
+                        <h1>+880 1785-998429</h1>
                     </Col>
                     <Col className="info-2 py-2 px-4">
                         <i class="far fa-calendar-alt"></i>
                         <h2 className="sub-title mb-2">Doctors Timetable</h2>
                         <p>To get your favourit doctors appoinment, you need to connect your doctors assistant, he or she will help you to book a appoinment as your wish list.</p>
-                        <h1>+8801785998429</h1>
+                        <h1>+880 1852-877996</h1>
                     </Col>
                     <Col className="info-3 py-2 px-4">
                         <i class="far fa-clock"></i>

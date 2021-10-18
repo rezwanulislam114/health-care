@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './Authentication.css'
 
 const SignUp = () => {
-    const { signUpWithEmail, error, setError, success } = useAuth();
+    const { signUpWithEmail, error, setError, success, loginWithGoogle } = useAuth();
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -37,7 +37,7 @@ const SignUp = () => {
                 <input type="submit" className="btn-regular" value="Sign Up" />
             </Form>
             <hr />
-            <button className="btn-regular input-btn">Sign Up With Google</button>
+            <button onClick={loginWithGoogle} className="btn-regular input-btn">Sign Up With Google</button>
             <p className="text-center mt-5">Already have an accout? <Link to="/login">Login Here</Link></p>
         </div>
     );

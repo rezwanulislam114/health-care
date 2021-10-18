@@ -14,9 +14,10 @@ const useFirebase = () => {
 
     const signUpWithEmail = (name, email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
-            .then(() => {
+            .then((result) => {
                 // sign up successfully
                 addName(name) // for adding name in profile
+                setUser(result.user)
                 setError('');
                 setSuccess('You signed up successfully')
             })

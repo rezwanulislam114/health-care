@@ -8,6 +8,7 @@ import SignUp from './components/Authentication/SignUp';
 import Login from './components/Authentication/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </AuthProvider>
   );
