@@ -1,17 +1,40 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { loginWithEmail, error } = useAuth();
+    const { loginWithEmail, error, loginWithGoogle, setUser, setError } = useAuth();
+
+    const history = useHistory()
+    const location = useLocation()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const redirect_url = location.state?.from || "/home"
+
     const handleLogin = e => {
         e.preventDefault();
         loginWithEmail(email, password)
+            .then((result) => {
+                // Signed in 
+                setUser(result.user);
+                history.push(redirect_url)
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+    }
+
+    const handleGoogleLogin = () => {
+        loginWithGoogle()
+            .then((result) => {
+                setUser(result.user);
+                history.push(redirect_url)
+            }).catch((error) => {
+                setError(error.message)
+            });
     }
 
     return (
@@ -25,7 +48,7 @@ const Login = () => {
             </Form>
             <p className="text-center">Forgot password? <button className="reset-button">Reset password</button></p>
             <hr />
-            <button className="btn-regular input-btn">Sign Up With Google</button>
+            <button onClick={handleGoogleLogin} className="btn-regular input-btn">Login With Google</button>
             <p className="text-center mt-5">Haven't any account? <Link to="/signup">Sign up Here</Link></p>
         </div>
     );
