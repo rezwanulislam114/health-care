@@ -1,0 +1,8 @@
+.about-icon {
+    width: 100px;
+    transition: .3s;
+    overflow: hidden;
+}
+.singleAbout:hover .about-icon{
+    transform: scale(1.2);
+}
