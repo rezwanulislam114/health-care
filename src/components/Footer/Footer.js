@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <Container fluid className="bg-light border-top pt-4">
+        <Container fluid className="bg-light border-top mt-5 pt-4">
             <Container>
                 <Row>
                     <Col className="col-md-4 col-12">
