@@ -10,6 +10,27 @@ const Home = () => {
             <Banner />
             <Services />
 
+            <Container fluid className="overview mt-5">
+                <Container className="d-flex flex-column flex-md-row text-white justify-content-evenly">
+                    <div className="text-center">
+                        <h1>22</h1>
+                        <h5>Health Section</h5>
+                    </div>
+                    <div className="text-center">
+                        <h1>146</h1>
+                        <h5>Different Services</h5>
+                    </div>
+                    <div className="text-center">
+                        <h1>1476</h1>
+                        <h5>Successful Surgery</h5>
+                    </div>
+                    <div className="text-center">
+                        <h1>12883</h1>
+                        <h5>Satisfied Patienst</h5>
+                    </div>
+                </Container>
+            </Container>
+
             <Container>
                 <Row className="basic-info my-5" xs={1} lg={3}>
                     <Col className="info-1 py-2 px-4">
@@ -42,6 +63,8 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
+
+
         </div>
     );
 };

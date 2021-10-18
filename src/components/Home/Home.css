@@ -15,3 +15,32 @@
 .info-3 {
     background: #dac3ff;
 }
+.overview {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.6)), url('../../images//home/overview.bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .basic-info {
+        padding: 15px 20px;
+    }
+    .basic-info i {
+        font-size: 60px;
+    }
+    .info-1 {
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+    .info-3 {
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    .overview {
+        padding: 25px 0;
+    }
+    .overview div {
+        margin: 25px 0;
+    }
+}
