@@ -1,6 +1,12 @@
 .primary-color {
     color: #006ba6
 }
+.navbar-link a{
+    border-bottom: 4px solid transparent;
+}
+.navbar-link a:hover {
+    color: #006ba6;
+}
 .logo {
     width: 40px;
     margin-right: 10px;

@@ -2,12 +2,15 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
 import logo from '../../images/logo.png'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
     const { user, logOut } = useAuth();
-    console.log(user)
+    const activeStyle = {
+        borderBottom: '4px solid #006ba6',
+        color: '#006ba6'
+    }
 
     return (
         <div>
@@ -20,9 +23,9 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link as={Link} to="about">About</Nav.Link>
-                            <Nav.Link as={Link} to="contact">Contact</Nav.Link>
+                        <Nav className="navbar-link me-auto">
+                            <Nav.Link as={NavLink} activeStyle={activeStyle} to="about">About</Nav.Link>
+                            <Nav.Link as={NavLink} activeStyle={activeStyle} to="contact">Contact</Nav.Link>
                         </Nav>
                         <Nav>
                             {

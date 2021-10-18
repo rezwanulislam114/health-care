@@ -7,6 +7,7 @@ import About from './components/About/About';
 import SignUp from './components/Authentication/SignUp';
 import Login from './components/Authentication/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </BrowserRouter>

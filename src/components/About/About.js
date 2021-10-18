@@ -67,7 +67,7 @@ const About = () => {
                                         alt="First slide"
                                     />
                                     <Carousel.Caption className="review">
-                                        <p className="text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <p className="text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                         <div className="text-start">
                                             <img src={person1} alt="" />
                                             <div>

@@ -1,0 +1,17 @@
+.basic-info {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.basic-info i {
+    font-size: 100px;
+    margin-top: 15px;
+}
+.info-1 {
+    background: #ade2ff;
+}
+.info-2 {
+    background: #ffb6bf;
+}
+.info-3 {
+    background: #dac3ff;
+}
