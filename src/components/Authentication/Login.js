@@ -4,7 +4,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { loginWithEmail, error, loginWithGoogle, setUser, setError } = useAuth();
+    const { loginWithEmail, error, loginWithGoogle, setUser, setError, resetPassword, setLoading } = useAuth();
 
     const history = useHistory()
     const location = useLocation()
@@ -24,7 +24,8 @@ const Login = () => {
             })
             .catch((error) => {
                 setError(error.message);
-            });
+            })
+            .finally(() => setLoading(false));
     }
 
     const handleGoogleLogin = () => {
@@ -32,9 +33,11 @@ const Login = () => {
             .then((result) => {
                 setUser(result.user);
                 history.push(redirect_url)
-            }).catch((error) => {
+            })
+            .catch((error) => {
                 setError(error.message)
-            });
+            })
+            .finally(() => setLoading(false));
     }
 
     return (
@@ -46,7 +49,7 @@ const Login = () => {
                 <p className="text-danger">{error}</p>
                 <input type="submit" className="btn-regular" value="Login" />
             </Form>
-            <p className="text-center">Forgot password? <button className="reset-button">Reset password</button></p>
+            <p className="text-center">Forgot password? <button onClick={resetPassword} className="reset-button">Reset password</button></p>
             <hr />
             <button onClick={handleGoogleLogin} className="btn-regular input-btn">Login With Google</button>
             <p className="text-center mt-5">Haven't any account? <Link to="/signup">Sign up Here</Link></p>

@@ -8,6 +8,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const [loading, setLoading] = useState(true);
 
     const auth = getAuth();
 
@@ -54,14 +55,16 @@ const useFirebase = () => {
     }
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // User is signed in, see docs for a list of available properties
                 setUser(user)
             } else {
-                // User is signed out
+                setUser({})
             }
+            setLoading(false)
         });
+        return () => unsubscribed
     }, [])
 
     return {
@@ -73,7 +76,9 @@ const useFirebase = () => {
         setError,
         success,
         logOut,
-        loginWithGoogle
+        loginWithGoogle,
+        loading,
+        setLoading,
     }
 }
 
