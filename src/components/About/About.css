@@ -1,0 +1,34 @@
+.gallary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.gallary-image {
+    overflow: hidden;
+}
+.gallary-image img{
+    width: 400px;
+    height: 220px;
+    transition: .3s;
+    cursor: pointer;
+}
+.gallary-image img:hover{
+    transform: scale(1.2);
+}
+.review {
+    color: rgb(75, 75, 75) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.review img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .gallary{
+        grid-template-columns: 1fr;
+    }
+}

@@ -3,6 +3,9 @@
     transition: .3s;
     overflow: hidden;
 }
-.singleAbout:hover .about-icon{
-    transform: scale(1.2);
+.singleAbout {
+    transition: .3s;
+}
+.singleAbout:hover {
+    transform: translateY(-20px)
 }
