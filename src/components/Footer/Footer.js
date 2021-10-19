@@ -40,8 +40,9 @@ const Footer = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col className="col-md-2 col-12">
-                        <div className="quick-link d-flex flex-row flex-lg-column mt-4">
+                    <Col className="col-md-2 col-12 mt-4">
+                        <h3>Quick Links</h3>
+                        <div className="quick-link d-flex flex-row flex-lg-column">
                             <Link to="/home">Home</Link>
                             <Link to="/about">About</Link>
                             <Link to="/contact">Contact</Link>

@@ -5,7 +5,7 @@ import useAuth from '../../hooks/useAuth';
 import './Authentication.css'
 
 const SignUp = () => {
-    const { signUpWithEmail, error, setError, success, loginWithGoogle } = useAuth();
+    const { signUpWithEmail, error, setError, loginWithGoogle } = useAuth();
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -32,12 +32,7 @@ const SignUp = () => {
                 <input onBlur={e => setEmail(e.target.value)} type="email" required placeholder="Email" />
                 <input onBlur={e => setPassword(e.target.value)} type="password" required placeholder="Password" />
                 <input onBlur={e => setConfirmPass(e.target.value)} type="password" required placeholder="Confirm Password" />
-                <div>
-                    {
-                        error ? <p className="text-danger">{error}</p> :
-                            <p className="text-success">{success}</p>
-                    }
-                </div>
+                <p className="text-danger">{error}</p>
                 <input type="submit" className="btn-regular" value="Sign Up" />
             </Form>
             <hr />

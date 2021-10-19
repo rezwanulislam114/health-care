@@ -19,7 +19,7 @@ const useFirebase = () => {
                 addName(name) // for adding name in profile
                 setUser(result.user)
                 setError('');
-                setSuccess('You signed up successfully')
+                window.location.reload();
             })
             .catch((error) => {
                 setError(error.message)
