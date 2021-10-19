@@ -14,9 +14,9 @@ const Doctors = () => {
 
     return (
         <Container>
-            <Row>
+            <Row xs={1} md={2}>
                 <Col>
-                    <img className="img-fluid p-4" src={doctorIntro} alt="" />
+                    <img className="img-fluid pt-4 px-4" src={doctorIntro} alt="" />
                 </Col>
                 <Col>
                     <h1 className="title">Why Choose Our Doctors</h1>
