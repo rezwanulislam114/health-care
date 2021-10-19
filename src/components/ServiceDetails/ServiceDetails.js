@@ -8,9 +8,9 @@ const ServiceDetails = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        fetch('/services.json')
+        fetch('/allData.json')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => setServices(data.services))
     }, [])
 
     const filterService = services.filter(service => service.id === parseInt(id));
