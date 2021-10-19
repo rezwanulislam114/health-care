@@ -6,9 +6,9 @@ import './Services.css'
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('/services.json')
+        fetch('./allData.json')
             .then(res => res.json())
-            .then(data => setServices(data));
+            .then(data => setServices(data.services));
     }, [])
     return (
         <Container>

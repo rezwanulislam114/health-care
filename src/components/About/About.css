@@ -9,22 +9,11 @@
 .gallary-image img{
     width: 400px;
     height: 220px;
-    transition: .3s;
+    transition: .5s;
     cursor: pointer;
 }
 .gallary-image img:hover{
     transform: scale(1.2);
-}
-.review {
-    color: rgb(75, 75, 75) !important;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.review img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {
