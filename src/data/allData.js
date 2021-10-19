@@ -144,8 +144,8 @@ const allData = {
             phone: '+880 1785-741367'
         },
         {
-            id: 1,
-            name: 'Dr. Kevin Sundstruom',
+            id: 8,
+            name: 'Dr. Kevin Adam',
             img: 'https://i.ibb.co/d027f6Z/unnamed.jpg',
             phone: '+880 1785-998429'
         },
