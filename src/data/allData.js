@@ -99,5 +99,55 @@ const allData = {
             says: 'Hay, hope you are all fine. My aunty was just reliesed from this hospital, and honestly saying that we are fully satisfied, Here the doctors are also up to mark. So its a suggestion from me to go their for any health issue.',
             img: 'https://i.ibb.co/gW4skd2/person-3.jpg'
         },
+    ],
+    doctor: [
+        {
+            id: 1,
+            name: 'Dr. David Berlind',
+            img: 'https://i.ibb.co/VJ4yvPg/360-F-260040900-o-O6-YW1s-HTn-Kxby4-Gcj-Cvtyp-UCWjn-QRg5.jpg',
+            phone: '+880 1785-998429'
+        },
+        {
+            id: 2,
+            name: 'Dr. Farnidz Jems',
+            img: 'https://i.ibb.co/9wPKLM5/depositphotos-138445604-stock-photo-male-doctor-in-hospital.jpg',
+            phone: '+880 1955-998439'
+        },
+        {
+            id: 3,
+            name: 'Dr. Shakira Marry',
+            img: 'https://i.ibb.co/SNyzSV0/file-20191203-66986-im7o5.jpg',
+            phone: '+880 1785-985419'
+        },
+        {
+            id: 4,
+            name: 'Dr. Jennefer Luip',
+            img: 'https://i.ibb.co/CBrDRbZ/images-3.jpg',
+            phone: '+880 1785-978416'
+        },
+        {
+            id: 5,
+            name: 'Dr. Jems Potter',
+            img: 'https://i.ibb.co/34y14j2/images-4.jpg',
+            phone: '+880 1785-999749'
+        },
+        {
+            id: 6,
+            name: 'Dr. Ella Marque',
+            img: 'https://i.ibb.co/cbGHjCL/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-postur.jpg',
+            phone: '+880 1785-978419'
+        },
+        {
+            id: 7,
+            name: 'Dr. Bairy Bons',
+            img: 'https://i.ibb.co/2gsL9t9/portrait-smiling-handsome-male-doctor-man-171337-5055.jpg',
+            phone: '+880 1785-741367'
+        },
+        {
+            id: 1,
+            name: 'Dr. Kevin Sundstruom',
+            img: 'https://i.ibb.co/d027f6Z/unnamed.jpg',
+            phone: '+880 1785-998429'
+        },
     ]
 }

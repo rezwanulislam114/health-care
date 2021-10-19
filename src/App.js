@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import ContactUs from './components/ContactUs/ContactUs';
+import Doctors from './components/Doctors/Doctors';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </PrivateRoute>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/doctors">
+            <Doctors />
           </Route>
           <Route path="/contact">
             <ContactUs />
