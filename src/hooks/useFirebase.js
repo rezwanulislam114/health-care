@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut, GoogleAuthProvider, signInWithPopup, sendPasswordResetEmail } from 'firebase/auth'
 import { useEffect, useState } from 'react';
 import initializeFirebase from '../firebase/firebase.init';
 
@@ -55,6 +55,18 @@ const useFirebase = () => {
         });
     }
 
+    const resetPassword = (email) => {
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                // Password reset email sent!
+                setError('')
+                setSuccess('Check your inbox, we sent you a email.')
+            })
+            .catch((error) => {
+                setError(error.message)
+            });
+    }
+
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -80,6 +92,7 @@ const useFirebase = () => {
         loginWithGoogle,
         loading,
         setLoading,
+        resetPassword
     }
 }
 

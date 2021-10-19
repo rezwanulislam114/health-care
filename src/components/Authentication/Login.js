@@ -4,7 +4,7 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { loginWithEmail, error, loginWithGoogle, setUser, setError, resetPassword, setLoading } = useAuth();
+    const { loginWithEmail, error, loginWithGoogle, setUser, setError, resetPassword, setLoading, success } = useAuth();
 
     const history = useHistory()
     const location = useLocation()
@@ -46,10 +46,15 @@ const Login = () => {
             <Form onSubmit={handleLogin}>
                 <input onBlur={e => setEmail(e.target.value)} required type="email" placeholder="Email" />
                 <input onBlur={e => setPassword(e.target.value)} required type="password" placeholder="Password" />
-                <p className="text-danger">{error}</p>
+                <div>
+                    {
+                        error ? <p className="text-danger">{error}</p> :
+                            <p className="text-success">{success}</p>
+                    }
+                </div>
                 <input type="submit" className="btn-regular" value="Login" />
             </Form>
-            <p className="text-center">Forgot password? <button onClick={resetPassword} className="reset-button">Reset password</button></p>
+            <p className="text-center">Forgot password? <button onClick={() => resetPassword(email)} className="reset-button">Reset password</button></p>
             <hr />
             <button onClick={handleGoogleLogin} className="btn-regular input-btn">Login With Google</button>
             <p className="text-center mt-5">Haven't any account? <Link to="/signup">Sign up Here</Link></p>

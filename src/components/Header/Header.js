@@ -36,7 +36,7 @@ const Header = () => {
                                         <button onClick={logOut} className="btn-regular m-0">Sign Out</button>
                                     </div> :
                                     <div className="d-flex align-items-center">
-                                        <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
+                                        <Nav.Link as={Link} className="me-4" to="/signup">Sign Up</Nav.Link>
                                         <Nav.Link as={Link} to="/login"> <button className="btn-regular m-0">Login</button> </Nav.Link>
                                     </div>
                             }

@@ -32,11 +32,11 @@ const Footer = () => {
                         <div className="mt-4">
                             <h3>Find Us On Social Media</h3>
                             <div className="social-link">
-                                <Link to="/home"><i class="fab fa-facebook"></i></Link>
-                                <Link to="/home"><i class="fab fa-twitter"></i></Link>
-                                <Link to="/home"><i class="fab fa-instagram"></i></Link>
-                                <Link to="/home"><i class="fab fa-whatsapp"></i></Link>
-                                <Link to="/home"><i class="fab fa-linkedin"></i></Link>
+                                <Link to="/home"><i className="fab fa-facebook"></i></Link>
+                                <Link to="/home"><i className="fab fa-twitter"></i></Link>
+                                <Link to="/home"><i className="fab fa-instagram"></i></Link>
+                                <Link to="/home"><i className="fab fa-whatsapp"></i></Link>
+                                <Link to="/home"><i className="fab fa-linkedin"></i></Link>
                             </div>
                         </div>
                     </Col>

@@ -32,8 +32,12 @@ const SignUp = () => {
                 <input onBlur={e => setEmail(e.target.value)} type="email" required placeholder="Email" />
                 <input onBlur={e => setPassword(e.target.value)} type="password" required placeholder="Password" />
                 <input onBlur={e => setConfirmPass(e.target.value)} type="password" required placeholder="Confirm Password" />
-                <p className="text-danger">{error}</p>
-                <p className="text-success">{success}</p>
+                <div>
+                    {
+                        error ? <p className="text-danger">{error}</p> :
+                            <p className="text-success">{success}</p>
+                    }
+                </div>
                 <input type="submit" className="btn-regular" value="Sign Up" />
             </Form>
             <hr />

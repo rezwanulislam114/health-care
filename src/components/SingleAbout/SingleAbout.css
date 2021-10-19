@@ -9,9 +9,3 @@
 .singleAbout:hover {
     transform: translateY(-20px)
 }
-
-@media only screen and (max-width: 768px) {
-    .singleAbout {
-        width: 80% !important;
-    }
-}
