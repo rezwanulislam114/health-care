@@ -1,0 +1,10 @@
+.doctor-detail-img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+.doctor-info {
+    background: linear-gradient(183deg, #006ba6 25%, #fff 26%);
+    background-size: cover;
+    padding: 60px 0;
+}

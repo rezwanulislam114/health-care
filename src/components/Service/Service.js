@@ -12,7 +12,7 @@ const Service = (props) => {
             <img src={icon} alt="" />
             <h2 className="sub-title">{name}</h2>
             <p>{description.slice(0, 80)}...</p>
-            <button onClick={() => history.push(`service/${id}`)} className="btn-regular">Learn More</button>
+            <button onClick={() => history.push(`servicedetails/${id}`)} className="btn-regular">Learn More</button>
         </Col>
     );
 };

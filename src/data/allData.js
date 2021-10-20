@@ -17,7 +17,7 @@ const allData = {
         {
             id: 3,
             name: 'Emergency Clinic',
-            description: 'We understand the frustration of waiting and having to travel to a separate location for results, which is why we provide an on-site lab to help patients get answers quickly and without the headache. In an emergency, time is critical. Let us provide efficient, caring treatment in a comfortable environment that’s focused on you. The Emergency Clinic offers comprehensive emergency medical care services to the residents of Texas. We have three convenient locations — Alamo Heights,',
+            description: 'We understand the frustration of waiting and having to travel to a separate location for results, which is why we provide an on-site lab to help patients get answers quickly and without the headache. In an emergency, time is critical. Let us provide efficient, caring treatment in a comfortable environment that’s focused on you. The Emergency Clinic offers comprehensive emergency medical care services to, the residents of Texas.We have three convenient locations — Alamo Heights',
             icon: 'https://i.ibb.co/vm0GP4y/5859199-ambulance-emergency-medical-transportation-vehicle-icon.png',
             img: 'https://i.ibb.co/BNj7P70/emergency.jpg'
         },
@@ -104,50 +104,66 @@ const allData = {
         {
             id: 1,
             name: 'Dr. David Berlind',
+            designation: 'Family Physician',
             img: 'https://i.ibb.co/VJ4yvPg/360-F-260040900-o-O6-YW1s-HTn-Kxby4-Gcj-Cvtyp-UCWjn-QRg5.jpg',
-            phone: '+880 1785-998429'
+            phone: '+880 1785-998429',
+            email: 'davidberlind2@gmail.com'
         },
         {
             id: 2,
-            name: 'Dr. Farnidz Jems',
+            name: 'Dr. Farnindz Jems',
+            designation: 'Pediatrician',
             img: 'https://i.ibb.co/9wPKLM5/depositphotos-138445604-stock-photo-male-doctor-in-hospital.jpg',
-            phone: '+880 1955-998439'
+            phone: '+880 1955-998439',
+            email: 'farnindzjm@gmail.com'
         },
         {
             id: 3,
             name: 'Dr. Shakira Marry',
+            designation: 'Gynecologist ',
             img: 'https://i.ibb.co/SNyzSV0/file-20191203-66986-im7o5.jpg',
-            phone: '+880 1785-985419'
+            phone: '+880 1785-985419',
+            email: 'shakiramarry43@gmail.com'
         },
         {
             id: 4,
             name: 'Dr. Jennefer Luip',
+            designation: 'Gastroenterologist',
             img: 'https://i.ibb.co/CBrDRbZ/images-3.jpg',
-            phone: '+880 1785-978416'
+            phone: '+880 1785-978416',
+            email: 'jenneferluip31@gmail.com'
         },
         {
             id: 5,
             name: 'Dr. Jems Potter',
+            designation: 'Gastroenterologist',
             img: 'https://i.ibb.co/34y14j2/images-4.jpg',
-            phone: '+880 1785-999749'
+            phone: '+880 1785-999749',
+            email: 'jemspotter85@gmail.com'
         },
         {
             id: 6,
             name: 'Dr. Ella Marque',
+            designation: 'Pulmonologist',
             img: 'https://i.ibb.co/cbGHjCL/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-postur.jpg',
-            phone: '+880 1785-978419'
+            phone: '+880 1785-978419',
+            email: 'ellamarq41@gmail.com'
         },
         {
             id: 7,
             name: 'Dr. Bairy Bons',
+            designation: 'Internal Medicine Physician',
             img: 'https://i.ibb.co/2gsL9t9/portrait-smiling-handsome-male-doctor-man-171337-5055.jpg',
-            phone: '+880 1785-741367'
+            phone: '+880 1785-741367',
+            email: 'bairybons7@gmail.com'
         },
         {
             id: 8,
             name: 'Dr. Kevin Adam',
+            designation: 'Pulmonologist',
             img: 'https://i.ibb.co/d027f6Z/unnamed.jpg',
-            phone: '+880 1785-998429'
+            phone: '+880 1785-998429',
+            email: 'kevinadam12@gmail.com'
         },
     ]
 }

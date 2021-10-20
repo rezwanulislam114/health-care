@@ -1,13 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import './Doctor.css'
 
 const Doctor = (props) => {
-    const { name, img, phone } = props.doctor;
+    const { id, name, img, designation } = props.doctor;
+    const history = useHistory();
+
     return (
         <div className="doctor">
             <img className="doctor-img" src={img} alt="" />
-            <h3 className="sub-title">{name}</h3>
-            <p>{phone}</p>
+            <h3 className="sub-title mb-0">{name}</h3>
+            <p><i>{designation}</i></p>
+            <button onClick={() => history.push(`/doctordetails/${id}`)} className="btn-regular">See Details</button>
         </div>
     );
 };
